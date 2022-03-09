@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import SeasonDisplay from "./SeasonDisplay";
+import LocationLoader from "./LocationLoader";
 
 // const App = ()=>{
 //   window.navigator.geolocation.getCurrentPosition(
@@ -27,10 +28,14 @@ class App extends Component {
   // }
 
   // Alternate state initialisation
-  state = { latitude: null, longitude: null, errorMessage: '' };
+  state = { latitude: null, longitude: null, errorMessage: "" };
 
   componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
+      // you should never write this
+      // this.state.latitude = 99;
+
+      // only way to update the state
       (position) => this.setState({ latitude: position.coords.latitude }),
       (err) => {
         this.setState({ errorMessage: err.message });
@@ -42,15 +47,25 @@ class App extends Component {
     console.log("My component was updated and re-rendered to the screen");
   }
 
-  render() {
+  renderContent() {
     // Conditional rendering
     if (this.state.latitude && !this.state.errorMessage) {
-      return <SeasonDisplay latitude={this.state.latitude}/>;
+      return (
+        <div>
+          <SeasonDisplay latitude={this.state.latitude} />
+          
+        </div>
+      );
     }
     if (!this.state.latitude && this.state.errorMessage) {
       return <div>Error : {this.state.errorMessage}</div>;
     }
-    return <div>Loading...</div>;
+    return <LocationLoader message='Please allow location request' />;
+  }
+  // Best practice - do not add mutiple return statements inside render()
+  // place those conditions inside renderContent() helper function
+  render() {
+    return <div>{this.renderContent()}</div>;
   }
 }
 

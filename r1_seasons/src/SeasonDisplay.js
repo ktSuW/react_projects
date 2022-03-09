@@ -1,9 +1,10 @@
 import './SeasonDisplay.css';
 import React from "react";
-
+import Clock from "./Clock";
+// config object 
 const seasonConfig = {
-  summer: { text: "Let's hit the beach 🏖️!", iconName: "sun" },
-  winter: { text: "It is chilly☃️❄️!", iconName: "snowflake" },
+  summer: { text: "🏖️ Let's hit the beach !", iconName: "sun" },
+  winter: { text: "☃️ It is chilly!", iconName: "snowflake" },
 };
 // Nothern hemi : April to Aug 3-7 summer
 // else winter
@@ -29,7 +30,11 @@ const SeasonDisplay = (props) => {
   return (
     <div className={`season-display ${season}`}>
       <i className={`icon-left massive ${iconName} icon`} />
-      <h1>{text}</h1>
+      <h1>
+        {text}
+        <Clock/>
+      </h1>
+
       <i className={`icon-right massive ${iconName} icon`} />
     </div>
   );
