@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import SeasonDisplay from "./SeasonDisplay";
 import LocationLoader from "./LocationLoader";
+import Clock from "./Clock";
 
 // const App = ()=>{
 //   window.navigator.geolocation.getCurrentPosition(
@@ -53,7 +54,6 @@ class App extends Component {
       return (
         <div>
           <SeasonDisplay latitude={this.state.latitude} />
-          
         </div>
       );
     }
