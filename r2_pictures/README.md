@@ -16,7 +16,10 @@ This app :
   - onInputChange 
   - on (handle) + name of element you are assigning the input to + event you are watching for
   - The event will get called when on input being changed.
-3. Event handlers : onClic, onSubmit, onChange 
+3. Event handlers : onClick, onSubmit, onChange 
+  - input tag
+  - form 
+  - this value 
 4. Controlled vs Uncontrolled components
   - User types in input
   - callback gets invoked, i.e., onChange
@@ -24,3 +27,7 @@ This app :
   - render methods gets called again and re-render
   - input is told what its value is
   - Controlled is preferred since information is stored inside the component (React World), not in DOM
+  - render list - map method 
+5. React refs - gives access to a single DOM element 
+  - They are created in the constructor, assign them to instance variables, then pass to a particular JSX element as props
+  - React.createRef();

@@ -1,4 +1,6 @@
+import './ImageList.css';
 import React from "react";
+import ImageCard from './ImageCard';
 
 const ImageList = (props) => {
   // const images = props.images.map((image) => {
@@ -7,11 +9,11 @@ const ImageList = (props) => {
   //   );
   // });
 
-  // Destructuring 
-    const images = props.images.map(({ description, id, urls }) => {
-      return <img alt={description} key={id} src={urls.regular} />;
+  // Destructuring not required after creating ImageCard 
+    const images = props.images.map((image) => {
+      return <ImageCard key={image.id} image={image}/>;
     });
-  return <div>{images}</div>;
+  return <div className='image-list'>{images}</div>;
 };
 
 export default ImageList;
