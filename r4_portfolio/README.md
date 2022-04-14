@@ -31,7 +31,10 @@ This repo contains react code. I wanted to learn more about React components and
 - Footer Component 
 
 ## Properties of Components
-
-## 
+- [Icons](https://react-icons.github.io/react-icons/search?q=bulb)
+- React icons are always SVG
+- {children} property
+- Attribute destructuring : you don't have to define every single property 
+  - 
 
 

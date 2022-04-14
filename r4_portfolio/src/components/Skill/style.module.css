@@ -1,0 +1,15 @@
+.skill {
+  text-align: center;
+}
+
+.skill SVG {
+  font-size: 5rem;
+  color: #4285f4;
+  margin-bottom: 2rem;
+}
+
+.skill h2 {
+  font-size: 1.8rem;
+  color: #4285f4;
+  letter-spacing: 0.1rem;
+}

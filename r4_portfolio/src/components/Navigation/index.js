@@ -5,7 +5,7 @@ export default function Navigation({links}) {
 
 
   return (
-    <section>
+    <div>
       <nav className={styles.navbar}>
         {/* {props.links.map(link => <Button
           className='navbar-link'
@@ -27,6 +27,6 @@ export default function Navigation({links}) {
           />
         ))}
       </nav>
-    </section>
+    </div>
   );
 }

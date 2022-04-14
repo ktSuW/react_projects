@@ -1,0 +1,60 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  background-color: #fff;
+  box-shadow: 00.3rem 0.3rem 0.5rem #777;
+  position: relative;
+  /* hide the content  */
+  overflow: hidden;
+  transition: box-shadow 0.5s;
+}
+
+.projectText {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  position: absolute;
+  top: -8rem;
+  transition: top 0.3s;
+  /* To bring up the project title, use z-index  */
+  z-index: 10;
+}
+
+.project:hover .projectText {
+  top: 5rem;
+  transition: top 0.3s 0.3s;
+}
+
+.projectName {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.projectTechnologies {
+  font-size: 1.4rem;
+  color: #4285f4;
+}
+
+.projectLink {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 0.1rem;
+  border: 0.3rem solid #4285f4;
+  padding: 0 1rem;
+  background-color: #fff;
+  position: absolute;
+  bottom: -5rem;
+  transition: bottom 0.3s;
+  border-radius: 1rem;
+}
+
+.project:hover .projectLink {
+  bottom: 5rem;
+  /* duration delay  */
+  transition: bottom 0.3s 0.3s;
+}

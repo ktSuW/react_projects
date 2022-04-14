@@ -1,0 +1,31 @@
+.progressBar {
+  width: 60rem;
+  height: 3rem;
+  background-color: #ccc;
+  margin: 1.5rem 0;
+  border-radius: 0.3rem;
+  box-shadow: rgba(0.2rem, 0.2rem, 1rem, #555);
+  position: relative;
+}
+
+.progressText {
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+  font-size: 1.7rem;
+  color: #333;
+}
+
+.progressText span {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.progressPercent {
+  width: 0%;
+  height: 100%;
+  background-color: #f4b400;
+  border-radius: 0.3rem;
+  transition: width 0.5s 0.5s ease-in-out;
+}

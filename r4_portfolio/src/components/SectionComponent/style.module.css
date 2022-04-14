@@ -1,0 +1,22 @@
+
+/************** Common for all sections  *****************/
+.sectionHeading {
+  font-size: 4rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  margin-bottom: 12rem;
+  border-bottom: 0.3rem solid #4285f4;
+  text-shadow: rgba(0.2rem, 0.2rem, 0.2rem, #555);
+}
+
+/************** ABOUT  *****************/
+.sectionWrapper {
+  width: 100%;
+  height: 100%;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
