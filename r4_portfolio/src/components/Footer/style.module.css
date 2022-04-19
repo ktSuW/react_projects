@@ -3,6 +3,13 @@
   height: 30vh;
   background-color: #dde7f7;
   flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+
 }
 
 .socialMedia {

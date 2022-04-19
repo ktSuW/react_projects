@@ -22,11 +22,6 @@
   z-index: 10;
 }
 
-.project:hover .projectText {
-  top: 5rem;
-  transition: top 0.3s 0.3s;
-}
-
 .projectName {
   font-size: 2rem;
   font-weight: 600;
@@ -37,6 +32,12 @@
 .projectTechnologies {
   font-size: 1.4rem;
   color: #4285f4;
+  font-weight: 700;
+}
+
+.projectImg {
+  width: 40rem;
+  transition: opacity 1.5s;
 }
 
 .projectLink {
@@ -53,8 +54,32 @@
   border-radius: 1rem;
 }
 
+
+.project:hover {
+  box-shadow: 1rem 1rem 1rem #777;
+}
+
+.project:hover .projectText {
+  top: 6rem;
+  transition: top 0.3s 0.3s;
+}
+
+.project:hover .projectTechnologies {
+  color: #1a4b9b;
+}
+
+.project:hover .projectImg {
+  opacity: 0.25;
+}
+
 .project:hover .projectLink {
   bottom: 5rem;
   /* duration delay  */
   transition: bottom 0.3s 0.3s;
 }
+
+
+
+
+
+

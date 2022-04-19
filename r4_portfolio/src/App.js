@@ -5,8 +5,10 @@ import Navigation from "./components/Navigation";
 import SectionComponent from "./components/SectionComponent";
 import { FaLightbulb, FaUserCog, FaTasks, FaLaptopCode } from "react-icons/fa";
 import Skill from "./components/Skill";
-import ProgressBarWrapper from "./components/ProgressBarWrapper";
 import ProgressBar from "./components/ProgressBar";
+import Project from "./components/Project";
+import Footer from "./components/Footer";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   const links = [
@@ -91,12 +93,55 @@ function App() {
   const projects = [
     {
       key: 1,
+      projectName: "Travel Website - Bootstrap",
+      projectTechnologies: "HTML, CSS, JavaScript",
+      img: "images/project-1.jpg",
+      href: "https://github.com/ktSuW/js_projects_practice/tree/master/travel_bootstrap",
+      goTo: "Go to the source",
+    },
+    {
+      key: 2,
       projectName: "Guess My Number",
       projectTechnologies: "HTML, CSS, JavaScript",
       img: "images/project-2.jpg",
       href: "https://github.com/ktSuW/js_projects_practice/tree/master/guess_my_number",
+      goTo: "Go to the source",
+    },
+    {
+      key: 3,
+      projectName: "Form Validator",
+      projectTechnologies: "HTML, CSS, JavaScript",
+      img: "images/project-3.jpg",
+      href: "https://github.com/ktSuW/js_projects_practice/tree/master/form_validator",
+      goTo: "Go to the source",
+    },
+    {
+      key: 4,
+      projectName: "Data Structure and Algorithms",
+      projectTechnologies: "JavaScript & Java",
+      img: "images/project-4.jpg",
+      href: "https://www.youtube.com/watch?v=KrExoVSBSW4&ab_channel=ktsuw_21",
+      goTo: "Go to YouTube",
+    },
+    {
+      key: 5,
+      projectName: "Guess My Number",
+      projectTechnologies: "HTML, CSS, JavaScript",
+      img: "images/project-5.jpg",
+      href: "https://github.com/ktSuW/js_projects_practice/tree/master/guess_my_number",
+      goTo: "Go to the source",
+    },
+    {
+      key: 6,
+      projectName: "Stop Watch",
+      projectTechnologies: "HTML, CSS, JavaScript",
+      img: "images/project-6.jpg",
+      href: "#",
+      goTo: "Go to the source",
     },
   ];
+
+
 
   return (
     <div className='App'>
@@ -104,17 +149,38 @@ function App() {
       <Navigation links={links} />
       <SectionComponent heading='About'>
         <div className='skills'>
-          {skills.map(({ key,icon, skillHeading }) => (
-            <Skill   
-              key={key}
-             icon={icon} 
-             title={skillHeading} />
+          {skills.map(({ key, icon, skillHeading }) => (
+            <Skill key={key} icon={icon} title={skillHeading} />
           ))}
         </div>
-        <div className="progress-bars-wrapper">
-
+        <div className='progressBarsWrapper'>
+          <div className='languages'>
+            {languages.map(({ key, language, percent }) => (
+              <ProgressBar key={key} language={language} percent={percent} />
+            ))}
+          </div>
         </div>
       </SectionComponent>
+      <SectionComponent heading='Projects'>
+        <div className='projectsWrapper center'>
+          {projects.map(
+            ({ key, projectName, projectTechnologies, img, href, goTo }) => (
+              <Project
+                key={key}
+                projectName={projectName}
+                projectTechnologies={projectTechnologies}
+                img={img}
+                href={href}
+                goTo={goTo}
+              />
+            )
+          )}
+        </div>
+      </SectionComponent>
+      <SectionComponent heading='Contact Me'>
+        <ContactForm />
+      </SectionComponent>
+      <Footer></Footer>
     </div>
   );
 }

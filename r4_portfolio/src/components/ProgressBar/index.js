@@ -1,12 +1,16 @@
 import styles from "./style.module.css";
 
-export default function ProgressBar(languages) {
+export default function ProgressBar({language, percent}) {
   return (
     <section className={styles.progressBar}>
-      <p className="progressText">{languages.language}
-      <span>%</span>
+      <p className={styles.progressText}>
+        {language}
+        <span>{percent}</span>%
       </p>
-      <div className="progressPercent"></div>
+      <div className={styles.progressPercent}></div>
     </section>
   );
 }
+
+
+

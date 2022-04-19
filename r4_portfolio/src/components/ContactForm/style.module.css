@@ -1,0 +1,60 @@
+.section-4 {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.section-4-heading {
+  box-shadow: none;
+  margin-bottom: 0rem;
+}
+
+.contactForm {
+  width: 50rem;
+  flex-direction: column;
+  border: #4285f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactForm label {
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  font-size: large;
+  margin-bottom: 1rem;
+}
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border: 0.2rem solid #f4b400;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.contactForm textarea {
+  height: 10rem;
+  max-height: 20rem;
+  max-width: 100%;
+}
+
+.contactForm .contactFormBtn {
+  color: #4285f4;
+  background-color: #fff;
+  font-size: 1.8rem;
+  transition: color 0.3s;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.contactForm .contactFormBtn:hover {
+  color: #333;
+  background: #f4b400;
+}
