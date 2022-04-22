@@ -13,8 +13,8 @@ export default function App() {
       <ScrollToTop />
       <NavBar />
       <Hero/>
-      <Services/>
       <Recommend/>
+      <Services/>
       <Testimonials/>
       <Footer/>
     </>

@@ -8,13 +8,13 @@ export default function NavBar() {
         <div className='brand'>
           <div className='container'>
             <img src={logo} />
-            Land of Morning Calm
+            日本
           </div>
           <div className='toggle'></div>
         </div>
         <ul>
           <li>
-            <a href='#home'>Home</a>{" "}
+            <a href='#hero'>Home</a>{" "}
           </li>
           <li>
             <a href='#services'>About</a>{" "}
@@ -60,17 +60,17 @@ const Nav = styled.nav`
     li {
       a {
         text-decoration: none;
-        color: #07A30C;
+        color: #07a30c;
         font-size: 1.2rem;
         transition: 0.2ms ease-in-out;
         &:hover {
-          color: #08A30C;
+          color: #08a30c;
           font-weight: 600;
         }
       }
       &:first-of-type {
         a {
-          color: #07A30C;
+          color: #07a30c;
           font-weight: 700;
         }
       }
@@ -84,7 +84,7 @@ const Nav = styled.nav`
     border: none;
     color: white;
     font-weight: 600;
-    background-color: #07A30C;
+    background-color: #07a30c;
     font-size: 1rem;
     letter-spacing: 0.1rem;
     transition: 0.3s ease-in-out;
