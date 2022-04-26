@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 import avatarImage1 from "../assets/avatarImage1.png";
 import avatarImage2 from "../assets/avatarImage2.png";
 import avatarImage3 from "../assets/avatarImage3.png";
@@ -32,7 +32,7 @@ export default function Testimonials() {
     },
   ];
   return (
-    <Section>
+    <Section id='testimonials'>
       <div className='title'>
         <h2>Travellers Review</h2>
       </div>
@@ -92,6 +92,20 @@ const Section = styled.section`
           span {
             font-size: 0.9rem;
           }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 280px) and (max-width: 760px) {
+    .testimonials {
+      flex-direction : column;
+      margin : 0;
+      .testimonial {
+        justify-content : center;
+        .info {
+          flex-direction: column;
+          justify-content : center;
         }
       }
     }

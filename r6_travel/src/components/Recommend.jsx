@@ -79,7 +79,7 @@ export default function Recommend() {
   const [active, setActive] = useState(1);
 
   return (
-    <Section id='recommend'>
+    <Section id='destinations'>
       <div className='title'>
         <h2>Destinations</h2>
       </div>
@@ -187,6 +187,25 @@ const Section = styled.section`
         display: flex;
         justify-content: space-between;
       }
+    }
+  }
+
+  @media screen and (min-width: 280px) and (max-width: 760px) {
+    .packages {
+      ul {
+        li {
+          padding : 0 0.5rem;
+          font-size : 2vh;
+          padding-bottom : 1rem;
+        }
+        .active {
+          border-bottom-width : 0.3rem;
+        }
+      }
+    }
+    .destinations {
+      grid-template-columns : 1fr;
+      padding : 0;
     }
   }
 `;

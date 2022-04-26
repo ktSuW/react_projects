@@ -6,18 +6,18 @@ export default function Footer() {
   return (
     <FooterContainer>
       <span>Copyright &copy; 2022 Japan Travel.</span>
-      <ul className='links'>
+      <ul>
         <li>
           <a href='#hero'>Home</a>{" "}
         </li>
         <li>
-          <a href='#services'>About</a>{" "}
+          <a href='#destinations'>Destinations</a>{" "}
         </li>
         <li>
-          <a href='#recommend'>Places</a>{" "}
+          <a href='#services'>Services</a>{" "}
         </li>
         <li>
-          <a href='#Testimonials'>Testimonials</a>{" "}
+          <a href='#testimonials'>Testimonials</a>{" "}
         </li>
       </ul>
       <ul className='social__links'>
@@ -46,7 +46,7 @@ const FooterContainer = styled.footer`
     list-style-type: none;
     gap: 2rem;
     li {
-      ${'' /* color: #07a30c; */}
+      ${"" /* color: #07a30c; */}
       a {
         text-decoration: none;
         color: black;
@@ -59,13 +59,24 @@ const FooterContainer = styled.footer`
         svg {
           font-size: 1.3rem;
           transition: 0.3s ease-in-out;
-          color : black;
+          color: black;
           &:hover {
             color: black;
             cursor: pointer;
           }
         }
       }
+    }
+  }
+
+  @media screen and (min-width: 280px) and (max-width: 1020px) {
+    flex-direction: column;
+    gap: 2rem;
+    ul {
+      flex-direction: column;
+    }
+    .social__links {
+      flex-direction: row;
     }
   }
 `;
